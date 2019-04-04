@@ -1,22 +1,17 @@
-public class Prime {
+ import java.util.Scanner;
+
+public class EvenOdd {
 
     public static void main(String[] args) {
 
-        int num = 29;
-        boolean flag = false;
-        for(int i = 2; i <= num/2; ++i)
-        {
-            // condition for nonprime number
-            if(num % i == 0)
-            {
-                flag = true;
-                break;
-            }
-        }
+        Scanner reader = new Scanner(System.in);
 
-        if (!flag)
-            System.out.println(num + " is a prime number.");
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " is even");
         else
-            System.out.println(num + " is not a prime number.");
+            System.out.println(num + " is odd");
     }
 }
